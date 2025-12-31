@@ -1,0 +1,334 @@
+#content-area {
+    position: relative;
+    height: 100vh; /* ensures it fills the viewport */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-image: url('../assets/images/Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#countdown-section {
+    width:50%;
+    height: calc(100vh - var(--nav-height));
+    background:none;
+    border: none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index: 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.countdown-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: clamp(30px, 10vw, 70px);
+    padding-bottom: clamp(20px, 5vw, 40px);
+}
+
+#hourglass {
+    position: relative;
+}
+
+#countdown {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #eaeaea;
+    font-size: clamp(10px, 4vw, 30px);
+    white-space: nowrap;
+      font-family: "Berkshire Swash", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#right-content {
+    width: 50%;
+    height: calc(100vh - var(--nav-height));
+  flex-direction: column;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+    max-height: calc(100vh - var(--nav-height));
+    overflow-y: auto;
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+
+}
+
+#teaser-section {
+    width: 100%;
+    height: calc(100vh - var(--nav-height));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    
+}
+
+#teaser-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* fills container nicely */
+    object-position: center;
+}
+
+  
+
+p {
+      font-family: "Berkshire Swash", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+button{
+      font-family: "Berkshire Swash", serif;
+  font-weight: 400;
+  font-style: normal;   
+}
+
+
+
+
+footer {
+    width: 100%;
+    background-color: #080707;
+    color: #fff;
+    font-family: "Berkshire Swash", serif;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* Row 1 - Flexible layout for Banner + Logo + Credits + Follow Info */
+#row1 {
+    height:auto;
+    display: flex;
+    flex-wrap: wrap;              /* wraps on small screens */
+    justify-content: center;      /* center horizontally */
+    align-items: flex-start;      /* align items at top */
+    gap: 30px;                    /* spacing between columns */
+    margin-bottom: 30px;
+    text-align: center;
+}
+#row1 > div {
+    flex: 1;              /* each takes equal width */
+    max-width: 33.333%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#Banner-Section {
+    display: flex;
+    align-items: center;   /* vertical alignment */
+    gap: 0px;             /* space between logo and text */
+    justify-content: center;
+}
+
+#Logo-Footer img {
+    width: 120px;          /* adjust size as needed */
+    height: auto;
+}
+
+#Banner {
+    font-size: 3rem;
+    white-space: nowrap;  /* prevents text wrapping */
+}
+
+#Credits, #FollowInfo {
+    flex: 1 1 200px; /* responsive width */
+    font-size: 1rem;
+    line-height: 1.6;
+   font-family: "Gantari";
+   font-weight: 400;
+}
+
+#FollowInfo a {
+    color: #ffbe5d;
+    text-decoration: none;
+}
+
+#FollowInfo a:hover {
+    color: #ffd98a;
+    text-shadow: 0 0 6px rgba(255, 190, 93, 0.8);
+}
+.glow2 {
+  
+  color: #fff;
+  text-align: center;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow2 {
+  from {
+     color:#fff;
+    
+  }
+  to {
+     color:#fff;
+    text-shadow: 0 0 20px #ffbe5d, 0 0 30px #ffc56e;
+  }
+}
+
+/* Row 2 - Copyright */
+#row2 {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+    height:auto;
+}
+
+@media screen and (max-width: 1050px) {
+    #main-page {
+        height: calc(100vh - var(--nav-height));
+        overflow-y: auto;
+    }
+
+    #content-area {
+        flex-direction: column;
+         height: auto;
+        min-height: calc(100vh - var(--nav-height));
+    }
+
+    #countdown-section {
+         position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 50vh;
+        padding-bottom: 20px;
+    }
+
+     #right-content {
+        width: 100%;
+        min-height: 80vh; /* or more */
+        background-size: cover;
+        background-position: center;
+    }
+    #teaser-section {
+        width: 100%;
+        margin: 20px;
+        height: 100%;
+        min-height: unset;
+        padding-bottom: 40px;
+        padding: 10px;
+
+    }
+#teaser-section img {
+        width: 100%;
+        height: auto;
+        max-height: 100vh;           /* prevents huge images */
+        object-fit: contain;        /* no cropping on phones */
+        border-radius: 12px;        /* optional: softer look */
+    }
+    #teaser-section h1 {
+        font-size: clamp(20px, 6vw, 36px);
+        text-align: left;
+    }
+
+    #timeline-section {
+        width: calc(100% - 40px);
+        margin: 20px;
+        height: 35vh;
+    }
+
+    #timeline-section h1 {
+        font-size: clamp(20px, 8vw, 65px);
+    }
+
+   
+    
+    #countdown {
+        font-size: clamp(16px, 8vw, 48px);
+    }
+        #row1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #Banner {
+        font-size: 2.5rem;
+    }
+
+    #Credits, #FollowInfo {
+        font-size: 0.9rem;
+        text-align: center;
+        
+    }
+
+    #row1 > div {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+
+  
+   
+}
+
+@media screen and (max-width: 525px) {
+  
+    
+    #content-area {
+        flex-direction: column;
+    }
+
+    #right-content {
+        margin-top: 3%;
+    }
+
+    #countdown {
+        font-size: clamp(16px, 8vw, 32px);
+    }
+     #teaser-section {
+       display: block;          /* stop flex centering */
+        width: 100%;
+        height: auto;            /* let content define height */
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+     #teaser-section img {
+
+        width: 100%;
+       
+     }
+   
+
+    #teaser-section h1 {
+        font-size: clamp(16px, 6vw, 28px);
+        text-align: center;
+    }
+
+    #teaser-section p {
+        font-size: clamp(12px, 4vw, 18px);
+        text-align: center;
+    }
+
+     #Banner {
+        font-size: 2rem;
+    }
+
+    #Credits, #FollowInfo {
+        font-size: 0.8rem;
+    }
+
+    #footer-logo img {
+        width: 120px;
+    }
+
+}
