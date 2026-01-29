@@ -1,0 +1,523 @@
+#main-page {
+    background-image: url('../assets/images/Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+#countdown-section {
+    width:50%;
+    height: calc(100vh - var(--nav-height));
+    background:none;
+    border: none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index: 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.countdown-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: clamp(30px, 10vw, 70px);
+    padding-bottom: clamp(20px, 5vw, 40px);
+}
+
+#hourglass {
+    position: relative;
+}
+
+#countdown {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    color:  #f5ca68;
+    font-size: clamp(10px, 4vw, 30px);
+    white-space: nowrap;
+      font-family: "Berkshire Swash", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#right-content {
+      width: 50%;
+    max-height: calc(100vh - var(--nav-height)); /* fit viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* start from top */
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;             /* allow scrolling if content is too tall */
+    color: white;
+}
+
+#teaser-section {
+     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;          /* space between video and image */
+    height: auto;       /* let content define height */
+    overflow: visible;
+    
+}
+
+#teaser-section img {
+     width: 100%;
+    height: auto; 
+    max-height: 80vh;   /* scale to fit viewport */
+    object-fit: contain; /* keep full image visible */
+    border-radius: 12px;
+}
+.teaser-video {
+   width: 100%;          /* full width of container */
+    height: auto;         /* keep aspect ratio */
+    max-height: none;     /* remove artificial limit */
+    object-fit: contain; 
+}
+
+  
+
+p {
+      font-family: "Berkshire Swash", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+button{
+      font-family: "Berkshire Swash", serif;
+  font-weight: 400;
+  font-style: normal;   
+}
+
+
+
+
+footer {
+    width: 100%;
+     background-color: #150303;;
+    color: #fff;
+    font-family: "Berkshire Swash", serif;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* Row 1 - Flexible layout for Banner + Logo + Credits + Follow Info */
+#row1 {
+    height:auto;
+    display: flex;
+    flex-wrap: wrap;              /* wraps on small screens */
+    justify-content: center;      /* center horizontally */
+    align-items: flex-start;      /* align items at top */
+    gap: 30px;                    /* spacing between columns */
+    margin-bottom: 30px;
+    text-align: center;
+}
+#row1 > div {
+    flex: 1;              /* each takes equal width */
+    max-width: 33.333%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#Banner-Section {
+    display: flex;
+    align-items: center;   /* vertical alignment */
+    gap: 0px;             /* space between logo and text */
+    justify-content: center;
+}
+
+#Logo-Footer img {
+    width: 120px;          /* adjust size as needed */
+    height: auto;
+}
+
+#Banner {
+    font-size: 3rem;
+    white-space: nowrap;  /* prevents text wrapping */
+}
+
+#Credits, #FollowInfo {
+    flex: 1 1 200px; /* responsive width */
+    font-size: 1rem;
+    line-height: 1.6;
+   font-family: "Gantari";
+   font-weight: 400;
+}
+
+#FollowInfo a {
+    color: #ffbe5d;
+    text-decoration: none;
+}
+
+#FollowInfo a:hover {
+    color: #ffd98a;
+    text-shadow: 0 0 6px rgba(255, 190, 93, 0.8);
+}
+.glow2 {
+  
+  color: #fff;
+  text-align: center;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+#about-us {
+    padding: 100px 10%;
+    color: #ffffff;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 80px;
+
+    background: linear-gradient(145deg, #3b0b14, #2a070c);
+   
+    border: 1px solid rgba(255, 190, 93, 0.5);
+    backdrop-filter: blur(14px); 
+    height:auto;
+    border-radius: 14px;
+/* red + yellow frame vibe */
+    border: 2px solid #ffbe5d;
+    box-shadow:
+        0 0 18px rgba(255, 190, 93, 0.25),
+        inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-subtitle {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.about-intro {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.intro-text p{
+      flex: 1;
+    font-size: 18px;
+    line-height: 1.7;
+ background: rgba(90, 15, 26, 0.45); /* lighter maroon */
+               /* maroon base */
+    padding: 30px 35px;
+    border-radius: 14px;
+
+    /* red + yellow frame vibe */
+    border: 2px solid #ffbe5d;
+    box-shadow:
+        0 0 18px rgba(255, 190, 93, 0.25),
+        inset 0 0 20px rgba(0, 0, 0, 0.3);
+font-family: "Spectral", serif;
+  font-weight: 200;
+ 
+}
+
+.intro-visual img {
+    height:300px;
+    width: 340px;
+    border: 2px solid #ffbe5d;
+    box-shadow:
+        0 0 18px rgba(255, 190, 93, 0.25),
+        inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-vision {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 100px;
+}
+
+.vision-card {
+   padding: 30px;
+  background: rgba(90, 15, 26, 0.45); /* lighter maroon */
+    border: 1px solid rgba(255, 190, 93, 0.5);
+    
+    border-radius: 16px;
+    text-align: center;
+    box-shadow:
+        0 0 25px rgba(214, 55, 82, 0.35);
+         border: 2px solid #ffbe5d;
+    box-shadow:
+        0 0 18px rgba(255, 190, 93, 0.25),
+        inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.vision-card h3 {
+    color: #ffbe5d;
+    margin-bottom: 10px;
+}
+
+.about-theme {
+    text-align: center;
+    padding: 80px 20px;
+    background: rgba(214, 55, 82, 0.05);
+    margin-bottom: 80px;
+}
+
+.theme-title {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+}
+
+.about-closing {
+    text-align: center;
+    font-size: 20px;
+    opacity: 0.85;
+}
+.about-paragraph {
+    margin-bottom: 28px;
+    padding: 26px 30px;
+    border-radius: 14px;
+    background: rgba(90, 15, 26, 0.45);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    line-height: 1.7;
+}
+
+.logo-wrapper {
+    position: relative;
+    width: 220px;                  /* square size */
+    height: 220px;                 /* square size */
+    background: rgba(214, 55, 82, 0.5); /* semi-transparent maroon */
+    backdrop-filter: blur(8px);     /* blur the background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;            /* slightly rounded corners */
+    box-shadow: 0 0 25px rgba(214, 55, 82, 0.5); /* glow effect */
+}
+
+.logo-wrapper img {
+    width: 160px;  /* bigger logo */
+    height: auto;
+    z-index: 1;    /* ensures it sits above blurred background */
+    display: block;
+}
+
+
+
+@keyframes glow2 {
+  from {
+     color:#fff;
+    
+  }
+  to {
+     color:#fff;
+    text-shadow: 0 0 20px #ffbe5d, 0 0 30px #ffc56e;
+  }
+}
+
+/* Row 2 - Copyright */
+#row2 {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+    height:auto;
+}
+#content-area {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1050px) {
+    #main-page {
+        height: calc(100vh - var(--nav-height));
+        overflow-y: auto;
+    }
+
+    #content-area {
+        flex-direction: column;
+         height: auto;
+        min-height: calc(100vh - var(--nav-height));
+    }
+
+    #countdown-section {
+         position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 50vh;
+        padding-bottom: 20px;
+    }
+
+     #right-content {
+        width: 100%;
+        min-height: 80vh; /* or more */
+        background-size: cover;
+        background-position: center;
+    }
+    #teaser-section {
+        width: 100%;
+        margin: 20px;
+        height: 100%;
+        min-height: unset;
+        padding-bottom: 40px;
+        padding: 10px;
+
+    }
+#teaser-section img {
+        width: 100%;
+        height: auto;
+        max-height: 100vh;           /* prevents huge images */
+        object-fit: contain;        /* no cropping on phones */
+        border-radius: 12px;        /* optional: softer look */
+    }
+    #teaser-section h1 {
+        font-size: clamp(20px, 6vw, 36px);
+        text-align: left;
+    }
+
+    #timeline-section {
+        width: calc(100% - 40px);
+        margin: 20px;
+        height: 35vh;
+    }
+
+    #timeline-section h1 {
+        font-size: clamp(20px, 8vw, 65px);
+    }
+
+   
+    
+    #countdown {
+        font-size: clamp(16px, 8vw, 48px);
+    }
+        #row1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #Banner {
+        font-size: 2.5rem;
+    }
+
+    #Credits, #FollowInfo {
+        font-size: 0.9rem;
+        text-align: center;
+        
+    }
+
+    #row1 > div {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+
+  
+     #about-us {
+        padding: 80px 6%;
+    }
+
+    .about-intro {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .intro-text {
+        font-size: 17px;
+    }
+
+    .intro-visual img {
+        width: 220px;
+    }
+
+    .about-vision {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .theme-title {
+        font-size: 38px;
+    }
+.about-vision {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 525px) {
+  
+    
+    #content-area {
+        flex-direction: column;
+    }
+
+    #right-content {
+        margin-top: 3%;
+    }
+
+    #countdown {
+        font-size: clamp(16px, 8vw, 32px);
+    }
+     #teaser-section {
+       display: block;          /* stop flex centering */
+        width: 100%;
+        height: auto;            /* let content define height */
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+     #teaser-section img {
+
+        width: 100%;
+       
+     }
+   
+
+    #teaser-section h1 {
+        font-size: clamp(16px, 6vw, 28px);
+        text-align: center;
+    }
+
+    #teaser-section p {
+        font-size: clamp(12px, 4vw, 18px);
+        text-align: center;
+    }
+
+     #Banner {
+        font-size: 2rem;
+    }
+
+    #Credits, #FollowInfo {
+        font-size: 0.8rem;
+    }
+
+    #footer-logo img {
+        width: 120px;
+    }
+      #about-us {
+        padding: 50px 4%;
+    }
+
+    .about-header h1 {
+        font-size: 30px;
+    }
+
+    .intro-visual img {
+        width: 180px;
+    }
+
+    .vision-card h3 {
+        font-size: 18px;
+    }
+
+    .vision-card p {
+        font-size: 14px;
+    }
+
+    .theme-title {
+        font-size: 26px;
+    }
+
+}
