@@ -20,7 +20,7 @@ var x = setInterval(function() {
     if (distance <= 0) {
         clearInterval(x);
         countdown.innerHTML = "Batch Reuvanos"; /* edit nyo once ano na name natin */
-        document.title = "Home - Reuanos";
+        document.title = "Home - Reuvanos";
         document.getElementById("sand-top").style.height = "0%";
         document.getElementById("sand-bottom").style.height = "100%";
         return;
@@ -60,5 +60,6 @@ var x = setInterval(function() {
 
         document.getElementById('grain-container').appendChild(grain);
     }
+
 
 }, 1000);
