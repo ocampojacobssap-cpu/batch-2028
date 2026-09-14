@@ -1,0 +1,91 @@
+#hourglass {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#hourglass-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background-image: url('../assets/images/Hourglass.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+#hourglass #sand {
+    width: calc(175px * var(--hg-scale, 1));
+    height: calc(290px * var(--hg-scale, 1));
+    position: absolute;
+    top: calc(100px * var(--hg-scale, 1));
+    left: calc(188px * var(--hg-scale, 1));
+    z-index: 1;
+    overflow: hidden;
+    filter:
+        hue-rotate(-8deg)
+        saturate(480%)
+        brightness(98%)
+        contrast(105%)
+        drop-shadow(0 0 12px rgba(214, 55, 82, 0.35));
+}
+
+#hourglass #top-container,
+#hourglass #bottom-container {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+#hourglass #sand-top,
+#hourglass #sand-bottom {
+    width: 90%;
+    height: 100%;
+    background-image: url('../assets/images/Sand.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    transition: height 1s linear;
+}
+
+#grain-container {
+    width: calc(10px * var(--hg-scale, 1));
+    height: calc(256px * var(--hg-scale, 1));
+    position: absolute;
+    top: calc(150px * var(--hg-scale, 1));
+    left: calc(70px * var(--hg-scale, 1));
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.sand-grain {
+    position: absolute;
+    width: calc(3px * var(--hg-scale, 1));
+    height: calc(3px * var(--hg-scale, 1));
+    background-color: #fc8eac;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(252, 142, 172, 0.6);
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0%   { transform: translateY(0); opacity: 1; }
+    90%  { opacity: 1; }
+    100% { transform: translateY(calc(256px * var(--hg-scale, 1))); opacity: 0; }
+}
+
+@media screen and (max-width: 1050px) {
+    #hourglass { transform: scale(0.85); }
+}
+
+@media screen and (max-width: 525px) {
+    #hourglass { transform: scale(0.7); }
+}
