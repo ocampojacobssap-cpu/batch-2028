@@ -52,8 +52,10 @@ body {
     overflow-x: hidden;
     margin-top: var(--nav-height);
     height: calc(100vh - var(--nav-height));
+    height: calc(100dvh - var(--nav-height));
     scrollbar-color: #606060 transparent;
     scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
 }
 
 #main-page::-webkit-scrollbar { width: 12px; }
@@ -467,9 +469,16 @@ footer::before {
 }
 
 @media screen and (max-width: 1050px) {
+    html, body {
+        overflow: visible;
+        height: auto;
+    }
+
     #main-page {
         height: auto;
+        min-height: calc(100dvh - var(--nav-height));
         overflow-y: visible;
+        margin-top: var(--nav-height);
     }
 
     .nav-logo { justify-content: center; gap: 8px; }
